@@ -42,24 +42,26 @@ router.post("", async (req, res) => {
   } else {
     if (typeof req.body.id !== "number") {
       if (error) {
-        error += ", id";
+        error += ", id(the id must be a number)";
       }
-      error = "Unvalid id";
+      error = "Unvalid id(the id must be a number)";
     }
     if (typeof req.body.productName !== "string") {
       if (error) {
-        error += ", product name";
-      } else error = "Unvalid product name";
+        error += ", product name(the name must be a string)";
+      } else error = "Unvalid product name(the name must be a string)";
     }
     if (typeof req.body.productPrice !== "number") {
       if (error) {
-        error += ", product price";
-      } else error = "Unvalid product price";
+        error += ", product price(the price must be a number)";
+      } else error = "Unvalid product price(the price must be a number)";
     }
     if (typeof req.body.productManufacturer !== "string") {
       if (error) {
-        error += ", product manufacturer";
-      } else error = "Unvalid product manufacturer";
+        error += ", product manufacturer(the manufacturer must be a string)";
+      } else
+        error =
+          "Unvalid product manufacturer(the manufacturer must be a string)";
     }
   }
 
